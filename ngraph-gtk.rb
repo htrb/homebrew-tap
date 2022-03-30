@@ -26,6 +26,6 @@ class NgraphGtk < Formula
   end
 
   test do
-    #    system "make", "check"
+    system "make", "check"
   end
 end
