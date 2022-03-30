@@ -18,9 +18,9 @@ class NgraphGtk < Formula
 
   def install
     system "autoreconf", "-i"
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "./configure", *std_configure_args, "--libexecdir=#{prefix}/lib/ngraph-gtk", "--disable-silent-rules"
     system "make"
-    #    system "(cd po; make ja.gmo)"
+    system "(cd po; make ja.gmo)"
     system "make", "install"
   end
 
