@@ -3,12 +3,11 @@ class NgraphGtk < Formula
   homepage "https://github.com/htrb/ngraph-gtk"
   url "https://github.com/htrb/ngraph-gtk.git"
   version "HEAD"
-#  sha256 "1b3f5579ee01a86bb775e651a5b39b54f7ffba7ed7fb4899dc6c77c47b6514ee"
   license "GPL-2.0-or-later"
 
-  depends_on "autoconf"
-  depends_on "automake"
-  depends_on "libtool"
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
   depends_on "adwaita-icon-theme"
   depends_on "gsl"
   depends_on "gtk+3"
@@ -21,9 +20,8 @@ class NgraphGtk < Formula
     system "autoreconf", "-i"
     system "./configure", *std_configure_args, "--disable-silent-rules"
     system "make"
-    system "(cd po; make ja.gmo)"
+    #    system "(cd po; make ja.gmo)"
     system "make", "install"
-    bin.install "SECURITY.md"
   end
 
   test do
