@@ -2,7 +2,7 @@ class NgraphGtk < Formula
   desc "Create scientific 2-dimensional plots"
   homepage "https://github.com/htrb/ngraph-gtk"
   url "https://github.com/htrb/ngraph-gtk.git"
-  version "HEAD"
+  version "v6.09.05"
   license "GPL-2.0-or-later"
 
   depends_on "autoconf" => :build
@@ -22,9 +22,6 @@ class NgraphGtk < Formula
     system "make"
     system "(cd po; make ja.gmo)"
     system "make", "install"
-    p self.prefix
-    p self.prefix.directory?
-    p Keg.new(self.prefix).empty_installation?
   end
 
   test do
