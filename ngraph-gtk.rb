@@ -1,8 +1,9 @@
 class NgraphGtk < Formula
+  NGRAPH_VERSION = '6.09.05'
   desc "Create scientific 2-dimensional plots"
   homepage "https://github.com/htrb/ngraph-gtk"
-  url "https://github.com/htrb/ngraph-gtk.git"
-  version "v6.09.05"
+  url "https://github.com/htrb/ngraph-gtk.git", tag: "v#{NGRAPH_VERSION}"
+  version NGRAPH_VERSION
   license "GPL-2.0-or-later"
 
   depends_on "autoconf" => :build
