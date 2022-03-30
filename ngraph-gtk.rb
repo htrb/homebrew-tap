@@ -22,9 +22,9 @@ class NgraphGtk < Formula
     system "make"
     system "(cd po; make ja.gmo)"
     system "make", "install"
-    p formula.prefix
-    p formula.prefix.directory?
-    p Keg.new(formula.prefix).empty_installation?
+    p self.prefix
+    p self.prefix.directory?
+    p Keg.new(self.prefix).empty_installation?
   end
 
   test do
