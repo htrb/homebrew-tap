@@ -23,7 +23,9 @@ class NgraphGtk < Formula
     system "autoreconf", "-i"
     system "./configure", *std_configure_args, "--libexecdir=#{prefix}/lib", "--disable-silent-rules"
     system "make"
-    system "(cd po; make ja.gmo)"
+    Dir.chdir('po') do
+      system 'make', 'ja.gmo'
+    end
     system "make", "install"
   end
 
