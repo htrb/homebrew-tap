@@ -3,8 +3,8 @@ class NgraphGtk < Formula
   NGRAPH_REPOSITORY = 'https://github.com/htrb/ngraph-gtk'
   desc "Create scientific 2-dimensional plots"
   homepage NGRAPH_REPOSITORY
-  url "https://github.com/htrb/ngraph-gtk.git", tag: "v#{NGRAPH_VERSION}"
-  head NGRAPH_REPOSITORY, branch: 'master'
+  url "#{NGRAPH_REPOSITORY}.git", tag: "v#{NGRAPH_VERSION}"
+  head "#{NGRAPH_REPOSITORY}.git", branch: 'master'
   version NGRAPH_VERSION
   license "GPL-2.0-or-later"
 
