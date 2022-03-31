@@ -1,11 +1,11 @@
 class NgraphGtk < Formula
-  NGRAPH_VERSION = '6.09.05'
-  NGRAPH_REPOSITORY = 'https://github.com/htrb/ngraph-gtk'
+  NGRAPH_VERSION = "6.09.05".freeze
+  NGRAPH_REPOSITORY = "https://github.com/htrb/ngraph-gtk".freeze
   desc "Create scientific 2-dimensional plots"
   homepage NGRAPH_REPOSITORY
   url "#{NGRAPH_REPOSITORY}.git", tag: "v#{NGRAPH_VERSION}"
-  head "#{NGRAPH_REPOSITORY}.git", branch: 'master'
   version NGRAPH_VERSION
+  head "#{NGRAPH_REPOSITORY}.git", branch: "master"
   license "GPL-2.0-or-later"
 
   depends_on "autoconf" => :build
@@ -21,10 +21,10 @@ class NgraphGtk < Formula
 
   def install
     system "autoreconf", "-i"
-    system "./configure", *std_configure_args, "--libexecdir=#{prefix}/lib", "--disable-silent-rules"
+    system "./configure", *std_configure_args, "--libexecdir=#{lib}", "--disable-silent-rules"
     system "make"
-    Dir.chdir('po') do
-      system 'make', 'ja.gmo'
+    Dir.chdir("po") do
+      system "make", "ja.gmo"
     end
     system "make", "install"
   end
