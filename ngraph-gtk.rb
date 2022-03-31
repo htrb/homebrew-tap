@@ -1,12 +1,11 @@
 class NgraphGtk < Formula
   NGRAPH_VERSION = "6.09.05".freeze
-  NGRAPH_REPOSITORY = "https://github.com/htrb/ngraph-gtk".freeze
+  NGRAPH_REPOSITORY = "https://github.com/htrb/ngraph-gtk.git".freeze
   desc "Create scientific 2-dimensional plots"
-  homepage NGRAPH_REPOSITORY
-  url "#{NGRAPH_REPOSITORY}.git", tag: "v#{NGRAPH_VERSION}"
-  version NGRAPH_VERSION
-  head "#{NGRAPH_REPOSITORY}.git", branch: "master"
+  homepage "https://github.com/htrb/ngraph-gtk"
+  url NGRAPH_REPOSITORY, tag: "v#{NGRAPH_VERSION}"
   license "GPL-2.0-or-later"
+  head NGRAPH_REPOSITORY, branch: "master"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
