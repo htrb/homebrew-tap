@@ -15,7 +15,6 @@ class NgraphGtk < Formula
   depends_on "gtk+3"
   depends_on "gtk-mac-integration"
   depends_on "gtksourceview4"
-  depends_on "librsvg"
   depends_on "readline"
 
   def install
