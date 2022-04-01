@@ -25,7 +25,6 @@ class NgraphGtk < Formula
       system "make", "ja.gmo"
     end
     system "make", "install"
-    bin.install_symlink libexec/"ngraph-gtk"
   end
 
   test do
