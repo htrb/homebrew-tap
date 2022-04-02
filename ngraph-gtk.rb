@@ -7,6 +7,7 @@ class NgraphGtk < Formula
   license "GPL-2.0-or-later"
   head NGRAPH_REPOSITORY, branch: "master"
 
+  depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "adwaita-icon-theme"
