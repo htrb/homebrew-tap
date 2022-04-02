@@ -12,11 +12,12 @@ class NgraphGtk < Formula
   depends_on "adwaita-icon-theme"
   depends_on "gsl"
   depends_on "gtk+3"
+  depends_on "gtksourceview4"
+  depends_on "readline"
+
   on_macos do
     depends_on "gtk-mac-integration"
   end
-  depends_on "gtksourceview4"
-  depends_on "readline"
 
   def install
     system "autoreconf", "-i"
