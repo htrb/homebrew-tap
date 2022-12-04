@@ -21,7 +21,7 @@ class NgraphGtk < Formula
   end
 
   def install
-    system "autoreconf", "-i"
+    system "autoreconf", "-if"
     system "./configure", *std_configure_args, "--disable-silent-rules"
     system "make"
     Dir.chdir("po") do
