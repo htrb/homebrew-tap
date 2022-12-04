@@ -20,6 +20,7 @@ class NgraphGtk < Formula
     depends_on "gtk-mac-integration"
     patch do
       url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ruby.patch"
+      sha256 "f103a113969cde8857c8fc878d14e641e96472c872e35ec833a7d128d6a4de1a"
     end
   end
 
