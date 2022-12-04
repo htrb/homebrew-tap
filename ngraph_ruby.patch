@@ -1,0 +1,12 @@
+diff --git a/configure.ac b/configure.ac
+index a2d70655..021c7a6e 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -92,6 +92,7 @@ if test $RUBY = yes; then
+     [RUBY_DLEXT=`ruby -e 'puts(RbConfig::CONFIG["DLEXT"])'`]
+     AC_SUBST(RUBY_DLEXT)
+ fi
++have_ruby_dev=no
+ AM_CONDITIONAL(HAVE_RUBY_DEV, test x$have_ruby_dev = xyes)
+ 
+ AM_PATH_GLIB_2_0($GLIB_REQUIRED_VERSION,,
