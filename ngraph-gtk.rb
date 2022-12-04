@@ -18,6 +18,9 @@ class NgraphGtk < Formula
 
   on_macos do
     depends_on "gtk-mac-integration"
+    patch do
+      url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ruby.patch"
+    end
   end
 
   def install
