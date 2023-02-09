@@ -21,6 +21,7 @@ class NgraphGtk < Formula
   end
 
   def install
+    ENV["PKG_CONFIG_PATH"] += ":#{ENV["HOMEBREW_REPOSITORY"]}/lib/pkgconfig"
     system "autoreconf", "-if"
     system "./configure", *std_configure_args, "--disable-silent-rules"
     system "make"
