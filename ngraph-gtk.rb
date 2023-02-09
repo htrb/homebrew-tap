@@ -1,5 +1,5 @@
 class NgraphGtk < Formula
-  NGRAPH_VERSION = "6.09.06".freeze
+  NGRAPH_VERSION = "6.09.07".freeze
   NGRAPH_REPOSITORY = "https://github.com/htrb/ngraph-gtk.git".freeze
   desc "Create scientific 2-dimensional plots"
   homepage "https://github.com/htrb/ngraph-gtk"
@@ -18,10 +18,6 @@ class NgraphGtk < Formula
 
   on_macos do
     depends_on "gtk-mac-integration"
-    patch do
-      url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ruby.patch"
-      sha256 "f103a113969cde8857c8fc878d14e641e96472c872e35ec833a7d128d6a4de1a"
-    end
   end
 
   def install
