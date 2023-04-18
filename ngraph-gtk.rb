@@ -10,6 +10,7 @@ class NgraphGtk < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
   depends_on "adwaita-icon-theme"
   depends_on "gsl"
   depends_on "gtk+3"
