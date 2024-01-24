@@ -1,6 +1,6 @@
 cask "ngraph-gtk-launcher" do
   version "1.0.0"
-  sha256 "7c20cc2560d0f698fd42e340747c0efc409bd7e55076c293e3d93cb212199fa5"
+  sha256 "00c001ec000c57f5e1d1899338cff26f3163779378f64cca2366802e3df0e5ab"
 
   url "https://github.com/htrb/ngraph-gtk-launcher/releases/download/v#{version}/ngraph-gtk.dmg"
   name "Ngraph-GTK Launcher"
