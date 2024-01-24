@@ -1,4 +1,4 @@
-class NgraphGtk < Formula
+class NgraphGtk4 < Formula
   NGRAPH_VERSION = "6.09.07".freeze
   NGRAPH_REPOSITORY = "https://github.com/htrb/ngraph-gtk.git".freeze
   desc "Create scientific 2-dimensional plots"
