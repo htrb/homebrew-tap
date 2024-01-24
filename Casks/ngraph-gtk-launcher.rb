@@ -8,6 +8,7 @@ cask "ngraph-gtk-launcher" do
   homepage "https://github.com/htrb/ngraph-gtk-launcher"
 
   app "ngraph-gtk.app"
+  depends_on formula: "ngraph-gtk"
 
   postflight do
     `xattr -cr #{appdir}/ngraph-gtk.app`
