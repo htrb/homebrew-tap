@@ -5,12 +5,12 @@ add a tap.
 	$ brew tap htrb/tap
 
 ### Ngraph-GTK Launcher
-install Ngraph-GTK with launcer App.
+install Ngraph-GTK with launcher App.
 
 	$ brew install --cask ngraph-gtk-launcher
  
 ### Ngraph-GTK
-install Ngraph-GTK.
+install Ngraph-GTK (without launcher App).
 
 	$ brew install ngraph-gtk
 
