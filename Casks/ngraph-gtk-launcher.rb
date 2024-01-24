@@ -9,5 +9,9 @@ cask "ngraph-gtk-launcher" do
 
   app "ngraph-gtk.app"
 
+  postflight do
+    `xattr -cr #{appdir}/ngraph-gtk.app`
+  end
+
   # No zap stanza required
 end
