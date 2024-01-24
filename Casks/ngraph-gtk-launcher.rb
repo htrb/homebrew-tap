@@ -7,7 +7,7 @@ cask "ngraph-gtk-launcher" do
   desc "Launcher App for ngraph-gtk installed with homebrew."
   homepage "https://github.com/htrb/ngraph-gtk-launcher"
 
-  app "ngraph-gtk"
+  app "ngraph-gtk.app"
 
   # No zap stanza required
 end
