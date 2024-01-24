@@ -9,7 +9,7 @@ cask "ngraph-gtk-launcher" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "Ngraph-Gtk Launcher"
+  pkg "ngraph-gtk"
 
   # No zap stanza required
 end
