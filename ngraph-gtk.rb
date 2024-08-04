@@ -1,7 +1,7 @@
 class NgraphGtk < Formula
   option "with-gtk4", "Use GTK4 instead of GTK3."
 
-  NGRAPH_VERSION = "6.09.07".freeze
+  NGRAPH_VERSION = "6.09.08".freeze
   NGRAPH_REPOSITORY = "https://github.com/htrb/ngraph-gtk.git".freeze
   desc "Create scientific 2-dimensional plots"
   homepage "https://github.com/htrb/ngraph-gtk"
