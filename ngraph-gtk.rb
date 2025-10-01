@@ -17,24 +17,24 @@ class NgraphGtk < Formula
   depends_on "gtksourceview5"
   depends_on "readline"
 
-  make_command = "make"
+  MAKE_COMMAND = ["make"]
   on_macos do
     depends_on "make" => :build
-    make_command = "gmake"
+    MAKE_COMMAND[0] = "gmake"
   end
 
   def install
     ENV["PKG_CONFIG_PATH"] += ":#{ENV["HOMEBREW_PREFIX"]}/lib/pkgconfig"
     system "autoreconf", "-if"
     system "./configure", *std_configure_args, "--disable-silent-rules", "--enable-nls"
-    system make_command
+    system MAKE_COMMAND[0]
     Dir.chdir("po") do
-      system make_command, "ja.gmo"
+      system MAKE_COMMAND[0], "ja.gmo"
     end
-    system make_command, "install"
+    system MAKE_COMMAND[0], "install"
   end
 
   test do
-    system make_command, "check"
+    system MAKE_COMMAND[0], "check"
   end
 end
