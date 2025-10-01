@@ -10,17 +10,18 @@ class NgraphGtk < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
+
+  depends_on "gsl"
+  depends_on "gtk4"
+  depends_on "adwaita-icon-theme"
+  depends_on "gtksourceview5"
+  depends_on "readline"
+
   make_command = "make"
   on_macos do
     depends_on "make" => :build
     make_command = "gmake"
   end
-
-  depends_on "gsl"
-  depends_on "gtk4"
-  depends_on "gtksourceview5"
-  depends_on "adwaita-icon-theme"
-  depends_on "readline"
 
   def install
     ENV["PKG_CONFIG_PATH"] += ":#{ENV["HOMEBREW_PREFIX"]}/lib/pkgconfig"
