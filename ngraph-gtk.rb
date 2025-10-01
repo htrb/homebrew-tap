@@ -6,29 +6,34 @@ class NgraphGtk < Formula
   url NGRAPH_REPOSITORY, tag: "v#{NGRAPH_VERSION}"
   license "GPL-2.0-or-later"
   head NGRAPH_REPOSITORY, branch: "master"
-  depends_on "gtk4"
-  depends_on "gtksourceview5"
-
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
-  depends_on "adwaita-icon-theme"
+  make_command = "make"
+  on_macos do
+    depends_on "make" => :build
+    make_command = "gmake"
+  end
+
   depends_on "gsl"
+  depends_on "gtk4"
+  depends_on "gtksourceview5"
+  depends_on "adwaita-icon-theme"
   depends_on "readline"
 
   def install
     ENV["PKG_CONFIG_PATH"] += ":#{ENV["HOMEBREW_PREFIX"]}/lib/pkgconfig"
     system "autoreconf", "-if"
     system "./configure", *std_configure_args, "--disable-silent-rules", "--enable-nls"
-    system "make"
+    system make_command
     Dir.chdir("po") do
-      system "make", "ja.gmo"
+      system make_command, "ja.gmo"
     end
-    system "make", "install"
+    system make_command, "install"
   end
 
   test do
-    system "make", "check"
+    system make_command, "check"
   end
 end
