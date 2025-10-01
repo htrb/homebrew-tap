@@ -12,8 +12,8 @@ class NgraphGtk < Formula
   depends_on "pkg-config" => :build
 
   depends_on "gsl"
-  depends_on "gtk4"
   depends_on "adwaita-icon-theme"
+  depends_on "gtk4"
   depends_on "gtksourceview5"
   depends_on "readline"
 
