@@ -21,10 +21,16 @@ class NgraphGtk < Formula
     depends_on "make" => :build
   end
 
+  patch do
+    url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ccname.patch"
+    sha256 "233f1b0371ad5418b8ac3f958e7f7310ef243313efe8764af49afba152bb9e08"
+  end
+
   def install
     ENV["PKG_CONFIG_PATH"] += ":#{ENV["HOMEBREW_PREFIX"]}/lib/pkgconfig"
     system "autoreconf", "-if"
     system "./configure", *std_configure_args, "--disable-silent-rules", "--enable-nls"
+    system %q(sed -I bak s/"'\"'"/'"'/g src/Makefile)
     system "gmake"
     Dir.chdir("po") do
       system "gmake", "ja.gmo"
