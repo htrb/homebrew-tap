@@ -30,7 +30,6 @@ class NgraphGtk < Formula
     ENV["PKG_CONFIG_PATH"] += ":#{ENV["HOMEBREW_PREFIX"]}/lib/pkgconfig"
     system "autoreconf", "-if"
     system "./configure", *std_configure_args, "--disable-silent-rules", "--enable-nls"
-    system %q(sed -I bak s/"'\"'"/'"'/g src/Makefile)
     system "gmake"
     Dir.chdir("po") do
       system "gmake", "ja.gmo"
