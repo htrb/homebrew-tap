@@ -23,7 +23,7 @@ class NgraphGtk < Formula
 
   patch do
     url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ccname.patch"
-    sha256 "233f1b0371ad5418b8ac3f958e7f7310ef243313efe8764af49afba152bb9e08"
+    sha256 "762150d088ebce377e5e47c286b7ee6eeaee2507fcd4ee1dfbf1eb414dcee65a"
   end
 
   def install
