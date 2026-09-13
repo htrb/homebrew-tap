@@ -23,11 +23,11 @@ class NgraphGtk < Formula
 
   if build.head?
     depends_on "freexl"
-  end
-
-  patch do
-    url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ccname.patch"
-    sha256 "762150d088ebce377e5e47c286b7ee6eeaee2507fcd4ee1dfbf1eb414dcee65a"
+  else
+    patch do
+      url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ccname.patch"
+      sha256 "762150d088ebce377e5e47c286b7ee6eeaee2507fcd4ee1dfbf1eb414dcee65a"
+    end
   end
 
   def install
