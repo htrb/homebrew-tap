@@ -1,0 +1,13 @@
+diff --git a/Makefile.am b/Makefile.am
+index 4c121b8d..1fa0ea0d 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -4,7 +4,7 @@ EXTRA_DIST = config.rpath pathconv.sh
+ 
+ doc_DATA = README AUTHORS ChangeLog NEWS COPYING
+ 
+-SUBDIRS = m4 src initfile driver addin demo doc zsh test mingw icons misc plugins osx gtksourceview po
++SUBDIRS = m4 src initfile driver addin demo doc zsh test mingw icons misc plugins gtksourceview po
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
