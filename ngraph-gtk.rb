@@ -5,6 +5,7 @@ class NgraphGtk < Formula
   homepage "https://github.com/htrb/ngraph-gtk"
   url NGRAPH_REPOSITORY, tag: "v#{NGRAPH_VERSION}"
   license "GPL-2.0-or-later"
+  head NGRAPH_REPOSITORY, branch: "master"
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
@@ -20,21 +21,16 @@ class NgraphGtk < Formula
     depends_on "make" => :build
   end
 
-  build_head = false
-  head do
-    url NGRAPH_REPOSITORY, branch: "master"
+  if build.head?
     depends_on "freexl"
-    build_head = true
-  end
-
-  unless build_head
+  else
     patch do
       url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ccname.patch"
       sha256 "762150d088ebce377e5e47c286b7ee6eeaee2507fcd4ee1dfbf1eb414dcee65a"
     end
     patch do
       url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/osx_iconset.patch"
-      sha256 "4a84b8b22731b0aaaf1a37729524245a71fc0fb8bea017468bd790c41d98e239"
+      sha256 "762150d088ebce377e5e47c286b7ee6eeaee2507fcd4ee1dfbf1eb414dcee65a"
     end
   end
 
