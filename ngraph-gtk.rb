@@ -30,11 +30,10 @@ class NgraphGtk < Formula
       url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/ngraph_ccname.patch"
       sha256 "762150d088ebce377e5e47c286b7ee6eeaee2507fcd4ee1dfbf1eb414dcee65a"
     end
-  end
-
-  patch do
-    url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/osx_iconset.patch"
-    sha256 "4a84b8b22731b0aaaf1a37729524245a71fc0fb8bea017468bd790c41d98e239"
+    patch do
+      url "https://raw.githubusercontent.com/htrb/homebrew-tap/main/osx_iconset.patch"
+      sha256 "4a84b8b22731b0aaaf1a37729524245a71fc0fb8bea017468bd790c41d98e239"
+    end
   end
 
   def install
