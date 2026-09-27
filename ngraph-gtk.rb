@@ -22,6 +22,7 @@ class NgraphGtk < Formula
   end
 
   head do
+    depends_on "autoconf-archive" => :build
     depends_on "freexl"
   end
 
