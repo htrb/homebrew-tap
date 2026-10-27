@@ -24,7 +24,7 @@ class NgraphGtk < Formula
 
   def install
     ENV["PKG_CONFIG_PATH"] += ":#{ENV["HOMEBREW_PREFIX"]}/lib/pkgconfig"
-    system "autoreconf", "-if"
+    system "/bin/sh", "-c", "autoreconf -if"
     system "./configure", *std_configure_args, "--disable-silent-rules", "--enable-nls"
     system "gmake"
     Dir.chdir("po") do
